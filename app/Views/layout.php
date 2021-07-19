@@ -24,6 +24,135 @@
     </style>
 </head>
 
+<!-- Style Start -->
+<style>
+    .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        font-size: 12px;
+        padding: 10px 24px;
+        border-radius: 8px;
+        background-color: white;
+        color: black;
+        border: 2px solid #fd8024;
+    }
+
+    .button1:hover {
+        background-color: #fd8024;
+        color: white;
+    }
+
+    .button2 {
+        font-size: 12px;
+        padding: 10px 24px;
+        border-radius: 8px;
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+    }
+
+    .button2:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+
+    .button3 {
+        font-size: 12px;
+        padding: 10px 24px;
+        border-radius: 8px;
+        background-color: white;
+        color: black;
+        border: 2px solid #f44336;
+    }
+
+    .button3:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    #example1 {
+        border: 10px solid white;
+
+        /* padding: 10px; */
+        /* border-radius: 25px; */
+        text-align: center;
+        padding-bottom: 40px;
+        border-radius: 5px;
+        background-color: #f2f5f7;
+        /* padding: 20px; */
+    }
+
+    body,
+    html {
+        background-color: #f2f5f7;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* SHOP BUTTON */
+    .button-shop {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #ffc107;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .button-shop span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        color: black;
+    }
+
+    .button-shop span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button-shop:hover span {
+        padding-right: 25px;
+    }
+
+    .button-shop:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style>
+<!-- Style End -->
+
+
+
+
 <body>
 
     <?= $this->include('navbar'); ?>
@@ -38,14 +167,14 @@
 
 
 
-        <div class="container">
-            <?= $this->renderSection('content'); ?>
-            <!-- Example row of columns -->
+        <!-- <div class="container-fluid"> -->
+        <?= $this->renderSection('content'); ?>
+        <!-- Example row of columns -->
 
 
-            <hr>
 
-        </div> <!-- /container -->
+
+        <!-- </div> /container -->
 
     </main>
 
@@ -62,9 +191,11 @@
     <script>
         window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
     </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <!-- <script src="../../assets/js/vendor/popper.min.js"></script> -->
     <script src="<?= base_url('bootstrap-4.0.0/dist/js/bootstrap.js') ?>"></script>
     <script src="<?= base_url('jquery-3.6.0.min.js') ?>"></script>
+
+    <?= $this->renderSection('script') ?>
 </body>
 
 </html>
